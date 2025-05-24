@@ -1,6 +1,5 @@
-import {cart} from "../data/carrito";
-
-const cart = [];
+import { cart } from '../data/carrito.js';
+import { products } from '../data/products.js';
 
 let productsHTML = '';
 
