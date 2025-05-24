@@ -1,3 +1,6 @@
+import {cart} from "../data/carrito";
+
+const cart = [];
 
 let productsHTML = '';
 
@@ -17,7 +20,7 @@ products.forEach((product)=> {
               <img class="product-rating-stars"
                 src="images/ratings/rating-${product.rating.stars * 10}.png">
               <div class="product-rating-count link-primary">
-                ${product.rating.counter}
+                ${product.rating.count}
               </div>
             </div>
 
