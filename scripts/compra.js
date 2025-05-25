@@ -1,4 +1,4 @@
-import { cart, eliminarDelCarro } from '../data/carrito.js';
+import { cart, removeFromCart } from '../data/carrito.js';
 import { products} from '../data/products.js';
 import { formatoDinero } from './utilidades/dinero.js';
 
@@ -9,13 +9,12 @@ cart.forEach((cartItem) => {
 
   let matchingProduct;
 
-  products.forEach((product)=> {
+  products.forEach((product) => {
     if (product.id === productId){
       matchingProduct = product;
     }
   });
 
-  console.log(matchingProduct);
 
   cartSummaryHTML +=`
     <div class="cart-item-container
@@ -105,7 +104,7 @@ document.querySelectorAll('.js-delete-link')
   .forEach((link) => {
     link.addEventListener('click', () => {
       const productId = link.dataset.productId;
-      eliminarDelCarro(productId);
+      removeFromCart(productId);
       
       const container = document.querySelector(
         `.js-cart-item-container-${productId}`
